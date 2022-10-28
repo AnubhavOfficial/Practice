@@ -1,0 +1,32 @@
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int n;
+    cin>>n;
+    string arr[n][2*n] = {"a"};
+    // arr[0][n]="*";
+    int a=n,b=n+1;
+    int i,j;
+    for(i=0;i<n;i++){
+        
+        for(j=a;j<b;j++){
+            arr[i][j]="*";
+        }
+    a--;
+    b++;
+    }
+    for(i=0;i<=n;i++){
+        for(j=0;j<2*n;j++){
+            if(arr[i][j]!="*"){
+                cout<<" ";
+            }
+            else
+            cout<<arr[i][j];
+        }
+        cout<<endl;
+    }
+}
